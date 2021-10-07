@@ -178,10 +178,11 @@ class _FlutterState extends State<Flutter> {
                     ),
                     SizedBox(height: 10,),
                     flutter[index]["imagebool"]==true?
-                    Container(
-                        width: MediaQuery.of(context).size.width*.85,
-                        height: 150,
-                        child: Image.network(flutter[index]["image"])):Container(),
+                    InteractiveViewer(
+                      maxScale: 2.5,
+                      minScale: .5,
+                      child: Image.network(flutter[index]["image"]),
+                    ):Container(),
                     RichText(
                       text: TextSpan(
                           text:"",
