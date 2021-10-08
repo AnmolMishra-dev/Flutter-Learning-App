@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'installation.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -77,25 +79,33 @@ class _HomeState extends State<Home> {
                         ],),
                     ) ,),
                 ),
-                  Container(
-                    decoration: BoxDecoration(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Installation()),
+                    );
 
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
 
 
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/maintenance.png",color: MyColor.TheamColor,),),
-                          Text("INSTALLATION ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/maintenance.png",color: MyColor.TheamColor,),),
+                            Text("INSTALLATION ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
 
-                        ],),
-                    ) ,),
+                          ],),
+                      ) ,),
+                  ),
                   Container(
                     decoration: BoxDecoration(
 
