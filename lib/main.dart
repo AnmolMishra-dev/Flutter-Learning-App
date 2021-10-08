@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 
+import 'WIDGET/widget_home.dart';
 import 'home.dart';
 import 'installation.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Home()
+      home: const WidgetHome()
     );
   }
 }
