@@ -210,7 +210,15 @@ class _FlutterState extends State<Flutter> {
           )
 
         ),
-        Text("Thank you ",style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize: 25),),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text("Thank you ",style: TextStyle(fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize: 25),),
+            Container(
+                height: 40,width: 40,
+                child: Image.asset("assets/flappy-dash.gif"))
+          ],
+        ),
       ],
     ),
 

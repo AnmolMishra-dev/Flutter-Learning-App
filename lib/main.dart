@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 
 import 'home.dart';
+import 'installation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Home()
+      home: const Installation()
     );
   }
 }
