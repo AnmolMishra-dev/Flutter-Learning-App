@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
 import 'package:shimmer/shimmer.dart';
 
+import 'installation.dart';
+
 class Flutter extends StatefulWidget {
   const Flutter({Key? key}) : super(key: key);
 
@@ -116,7 +118,13 @@ class _FlutterState extends State<Flutter> {
             highlightColor: Color(0XFF91a0b8),
             child: Padding(
               padding: const EdgeInsets.only(right: 10),
-              child: Icon(CupertinoIcons.forward),
+              child: InkWell(onTap: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Installation()),
+                );
+              },child: Icon(CupertinoIcons.forward)),
             )
           ),
 
