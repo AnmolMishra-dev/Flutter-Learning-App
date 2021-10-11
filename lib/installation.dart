@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/sdk.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'CONST/color.dart';
@@ -336,9 +337,17 @@ class _InstallationState extends State<Installation> {
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 10),
-              child: Icon(
-                CupertinoIcons.forward,
-                color: MyColor.TheamColor,
+              child: InkWell(onTap: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SDK()),
+                );
+              },
+                child: Icon(
+                  CupertinoIcons.forward,
+                  color: MyColor.TheamColor,
+                ),
               ),
             )
           ],
