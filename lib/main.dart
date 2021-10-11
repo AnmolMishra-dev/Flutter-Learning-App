@@ -8,6 +8,8 @@ import 'WIDGET/Widget Build Visualization/Platformspecific.dart';
 import 'WIDGET/Widget Build Visualization/Statemaintenance.dart';
 import 'WIDGET/Widget Build Visualization/basic.dart';
 import 'WIDGET/widget_home.dart';
+import 'WIDGET/widgets/Scaffold.dart';
+import 'WIDGET/widgets/appbar.dart';
 import 'home.dart';
 import 'installation.dart';
 
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Basic()
+      home: const AppBarWidget()
     );
   }
 }
