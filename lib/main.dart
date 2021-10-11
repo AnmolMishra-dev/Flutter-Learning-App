@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 
+import 'WIDGET/Introduction.dart';
+import 'WIDGET/Visualization.dart';
+import 'WIDGET/Widget Build Visualization/Layout.dart';
+import 'WIDGET/Widget Build Visualization/Platformspecific.dart';
+import 'WIDGET/Widget Build Visualization/Statemaintenance.dart';
+import 'WIDGET/Widget Build Visualization/basic.dart';
 import 'WIDGET/widget_home.dart';
 import 'home.dart';
 import 'installation.dart';
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const WidgetHome()
+      home: const Basic()
     );
   }
 }

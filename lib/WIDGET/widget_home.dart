@@ -54,21 +54,92 @@ class _WidgetHomeState extends State<WidgetHome> {
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
+
           children: [
+            SizedBox(height: 30,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width*.7,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+
                     children: [
-                      Icon(Icons.check_box_outline_blank,size: 15,color: MyColor.TheamColor,),
+                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
                       Text("Introduction to Widgets",style: TextStyle(color: MyColor.TheamColor,),),
                     ],
                   ),
                 ),
-                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,size: 15,)
+                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+              ],
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*.7,
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+                      Text("Widget Build Visualization",style: TextStyle(color: MyColor.TheamColor,),),
+                    ],
+                  ),
+                ),
+                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+              ],
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*.7,
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+                      Text("Platform specific widgets",style: TextStyle(color: MyColor.TheamColor,),),
+                    ],
+                  ),
+                ),
+                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+              ],
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*.7,
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+                      Text("Layout widgets",style: TextStyle(color: MyColor.TheamColor,),),
+                    ],
+                  ),
+                ),
+                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+              ],
+            ),
+            SizedBox(height: 20,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width*.7,
+                  child: Row(
+
+                    children: [
+                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+                      Text("Platform independent / basic widgets",style: TextStyle(color: MyColor.TheamColor,),),
+                    ],
+                  ),
+                ),
+                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
               ],
             ),
           ],
