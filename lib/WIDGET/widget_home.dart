@@ -45,7 +45,7 @@ class _WidgetHomeState extends State<WidgetHome> {
                   //   MaterialPageRoute(builder: (context) => Installation()),
                   // );
                 },child: Icon(CupertinoIcons.forward)),
-              )
+              ),
           ),
 
         ],
@@ -64,15 +64,15 @@ class _WidgetHomeState extends State<WidgetHome> {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Icon(Icons.check_box_outline_blank,size: 15,color: MyColor.TheamColor,),
-                      Text("Introduction to Widgets",style: TextStyle(color: MyColor.TheamColor,fontSize: 25),),
+                      Text("Introduction to Widgets",style: TextStyle(color: MyColor.TheamColor,),),
                     ],
                   ),
                 ),
                 Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,size: 15,)
               ],
-            )
+            ),
           ],
-        )
+        ),
       ),
     );
   }
