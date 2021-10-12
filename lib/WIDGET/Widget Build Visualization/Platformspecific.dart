@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
 import 'package:flutter_learning/WIDGET/widgets/BottomNavigationBar.dart';
+import 'package:flutter_learning/WIDGET/widgets/Date%20&%20Time%20Pickers.dart';
+import 'package:flutter_learning/WIDGET/widgets/FloatingActionButton.dart';
 import 'package:flutter_learning/WIDGET/widgets/RaisedButton.dart';
 import 'package:flutter_learning/WIDGET/widgets/Scaffold.dart';
 import 'package:flutter_learning/WIDGET/widgets/TabBar.dart';
@@ -214,38 +216,53 @@ class _PlatformSpecificState extends State<PlatformSpecific> {
                     ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => FloatingActionButtonwidget()),
+                    );
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("FloatingActionButton",style: TextStyle(fontSize: 18),),
-                          ],
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
+
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("FloatingActionButton",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DateTimePickersWidget()),
+                    );
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("Date & Time Pickers",style: TextStyle(fontSize: 18),),
-                          ],
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("Date & Time Pickers",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
                   Row(
