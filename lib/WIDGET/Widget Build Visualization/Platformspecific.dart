@@ -7,6 +7,7 @@ import 'package:flutter_learning/WIDGET/widgets/FloatingActionButton.dart';
 import 'package:flutter_learning/WIDGET/widgets/RaisedButton.dart';
 import 'package:flutter_learning/WIDGET/widgets/Scaffold.dart';
 import 'package:flutter_learning/WIDGET/widgets/TabBar.dart';
+import 'package:flutter_learning/WIDGET/widgets/TextField.dart';
 import 'package:flutter_learning/WIDGET/widgets/appbar.dart';
 import 'package:shimmer/shimmer.dart';
 class PlatformSpecific extends StatefulWidget {
@@ -265,21 +266,29 @@ class _PlatformSpecificState extends State<PlatformSpecific> {
                     ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TextFieldWidget()),
+                    );
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("TextField",style: TextStyle(fontSize: 18),),
-                          ],
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
+
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("TextField",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
                   Row(
@@ -299,22 +308,7 @@ class _PlatformSpecificState extends State<PlatformSpecific> {
                     ],
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("SimpleDialog",style: TextStyle(fontSize: 18),),
-                          ],
-                        ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
-                  ),
                   SizedBox(height: 10,),
                 ],
               ),
