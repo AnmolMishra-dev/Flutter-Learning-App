@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/what_is_flutter.dart';
 
-import 'WIDGET/widget_home.dart';
-import 'home.dart';
-import 'installation.dart';
+import 'WIDGET/widgets/Date & Time Pickers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +21,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const WidgetHome()
+      home: const DateTimePickersWidget()
     );
   }
 }
