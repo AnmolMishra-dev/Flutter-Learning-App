@@ -1,6 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
+import 'package:flutter_learning/WIDGET/widgets/BottomNavigationBar.dart';
+import 'package:flutter_learning/WIDGET/widgets/RaisedButton.dart';
+import 'package:flutter_learning/WIDGET/widgets/Scaffold.dart';
+import 'package:flutter_learning/WIDGET/widgets/TabBar.dart';
+import 'package:flutter_learning/WIDGET/widgets/appbar.dart';
 import 'package:shimmer/shimmer.dart';
 class PlatformSpecific extends StatefulWidget {
   const PlatformSpecific({Key? key}) : super(key: key);
@@ -87,89 +92,126 @@ class _PlatformSpecificState extends State<PlatformSpecific> {
               ),
               Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Scaffoldwidget()),
+                    );
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("Scaffold",style: TextStyle(fontSize: 18),),
-                          ],
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("Scaffold",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AppBarWidget()),
+                      );
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("AppBar",style: TextStyle(fontSize: 18),),
-                          ],
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("AppBar",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BottomNavigationBarwidget()),
+                    );
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("BottomNavigationBar",style: TextStyle(fontSize: 18),),
-                          ],
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("BottomNavigationBar",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TabBarWidget()),
+                    );
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("TabBar",style: TextStyle(fontSize: 18),),
-                          ],
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("TabBar",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width*.7,
-                        child: Row(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RaisedButtonWidget()),
+                    );
 
-                          children: [
-                            Icon(Icons.check_box_outline_blank,),
-                            Text("RaisedButton",style: TextStyle(fontSize: 18),),
-                          ],
+                  },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width*.7,
+                          child: Row(
+
+                            children: [
+                              Icon(Icons.check_box_outline_blank,),
+                              Text("RaisedButton",style: TextStyle(fontSize: 18),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Icon(Icons.arrow_forward_ios,)
-                    ],
+                        Icon(Icons.arrow_forward_ios,)
+                      ],
+                    ),
                   ),
                   SizedBox(height: 10,),
                   Row(

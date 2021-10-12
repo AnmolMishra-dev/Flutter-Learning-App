@@ -1,17 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/what_is_flutter.dart';
 
-import 'WIDGET/Introduction.dart';
-import 'WIDGET/Visualization.dart';
-import 'WIDGET/Widget Build Visualization/Layout.dart';
-import 'WIDGET/Widget Build Visualization/Platformspecific.dart';
-import 'WIDGET/Widget Build Visualization/Statemaintenance.dart';
-import 'WIDGET/Widget Build Visualization/basic.dart';
-import 'WIDGET/widget_home.dart';
-import 'WIDGET/widgets/Scaffold.dart';
-import 'WIDGET/widgets/appbar.dart';
-import 'home.dart';
-import 'installation.dart';
+import 'WIDGET/widgets/FloatingActionButton.dart';
+import 'WIDGET/widgets/RaisedButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +22,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const AppBarWidget()
+      home: const FloatingActionButtonwidget()
     );
   }
 }

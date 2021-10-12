@@ -22,7 +22,15 @@ class _AppBarWidgetState extends State<AppBarWidget> {
       "heading": "Key Properties of Appbar Widget:",
       "content": "actions: This property takes in a list of widgets as a parameter to be displayed after the title if the AppBar is a row.\ntitle: This property usually takes in the main widget as a parameter to be displayed in the AppBar.\nbackgroundColor: This property is used to add colors to the background of the Appbar.\nelevation: This property is used to set the z-coordinate at which to place this app bar relative to its parent.\nshape: This property is used to give shape to the Appbar and manage its shadow.",
 
-    }
+    },
+    {
+      "image":"https://drive.google.com/uc?export=view&id=1hqtxxxHPVCXarupWG0Ju1gvvqXQm9Cq9",
+      "heading": "Explanation:",
+      "content": "Here the AppBar widget is utilizing seven properties in total. It starts with the title ‘’. The second is the titlespacing which takes in double as a parameter and in this case, it is set to 00.0 to keep text close together. The third property is centerTitle which takes in boolean as a parameter and is set to true here. The fourth property is toolbarHeight which also takes in double as a parameter. This property provides a shadow underneath the AppBar which in turn makes it look elevated. The fifth property is shape it is utilized to give a different shape to the AppBar by modifying the border of the AppBar. The sixth property is elevation, it defines the z-coordinates at which the AppBar is to be placed with respect to its parent. It also takes in double as a parameter. And the last is the backgroundColor which controls the background color of the AppBar, in this case, we have the signature .",
+
+    },
+
+
   ];
   @override
   Widget build(BuildContext context) {
