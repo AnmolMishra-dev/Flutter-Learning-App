@@ -1,7 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
+import 'package:flutter_learning/WIDGET/Introduction.dart';
+import 'package:flutter_learning/WIDGET/Visualization.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'Widget Build Visualization/Layout.dart';
+import 'Widget Build Visualization/Platformspecific.dart';
+import 'Widget Build Visualization/basic.dart';
 class WidgetHome extends StatefulWidget {
   const WidgetHome({Key? key}) : super(key: key);
 
@@ -57,91 +63,129 @@ class _WidgetHomeState extends State<WidgetHome> {
 
           children: [
             SizedBox(height: 30,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
+            InkWell(onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Introduction()),
+              );
+            },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*.7,
+                    child: Row(
 
-                    children: [
-                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
-                      Text("Introduction to Widgets",style: TextStyle(color: MyColor.TheamColor,),),
-                    ],
+                      children: [
+                        Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+                        Text("Introduction to Widgets",style: TextStyle(color: MyColor.TheamColor,),),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
-              ],
+                  Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+                ],
+              ),
             ),
             SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
+            InkWell(onTap: (){
 
-                    children: [
-                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
-                      Text("Widget Build Visualization",style: TextStyle(color: MyColor.TheamColor,),),
-                    ],
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Visualization()),
+              );
+            },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*.7,
+                    child: Row(
+
+                      children: [
+                        Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+                        Text("Widget Build Visualization",style: TextStyle(color: MyColor.TheamColor,),),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
-              ],
+                  Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+                ],
+              ),
             ),
             SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
-
-                    children: [
-                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
-                      Text("Platform specific widgets",style: TextStyle(color: MyColor.TheamColor,),),
-                    ],
-                  ),
-                ),
-                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
-
-                    children: [
-                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
-                      Text("Layout widgets",style: TextStyle(color: MyColor.TheamColor,),),
-                    ],
-                  ),
-                ),
-                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
-
-                    children: [
-                      Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
-                      Text("Platform independent / basic widgets",style: TextStyle(color: MyColor.TheamColor,),),
-                    ],
-                  ),
-                ),
-                Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
-              ],
-            ),
+            // InkWell(onTap: (){
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => PlatformSpecific()),
+            //   );
+            //
+            // },
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       SizedBox(
+            //         width: MediaQuery.of(context).size.width*.7,
+            //         child: Row(
+            //
+            //           children: [
+            //             Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+            //             Text("Platform specific widgets",style: TextStyle(color: MyColor.TheamColor,),),
+            //           ],
+            //         ),
+            //       ),
+            //       Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+            //     ],
+            //   ),
+            // ),
+            // SizedBox(height: 20,),
+            // InkWell(onTap: (){
+            //
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => LayoutWidgets()),
+            //   );
+            // },
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //
+            //     children: [
+            //       SizedBox(
+            //         width: MediaQuery.of(context).size.width*.7,
+            //         child: Row(
+            //
+            //           children: [
+            //             Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+            //             Text("Layout widgets",style: TextStyle(color: MyColor.TheamColor,),),
+            //           ],
+            //         ),
+            //       ),
+            //       Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+            //     ],
+            //   ),
+            // ),
+            // SizedBox(height: 20,),
+            // InkWell(onTap: (){
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => Basic()),
+            //   );
+            // },
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       SizedBox(
+            //         width: MediaQuery.of(context).size.width*.7,
+            //         child: Row(
+            //
+            //           children: [
+            //             Icon(Icons.check_box_outline_blank,color: MyColor.TheamColor,),
+            //             Text("Platform independent / basic widgets",style: TextStyle(color: MyColor.TheamColor,),),
+            //           ],
+            //         ),
+            //       ),
+            //       Icon(Icons.arrow_forward_ios,color: MyColor.TheamColor,)
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),

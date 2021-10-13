@@ -2,6 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'Widget Build Visualization/Layout.dart';
+import 'Widget Build Visualization/Platformspecific.dart';
+import 'Widget Build Visualization/Statemaintenance.dart';
+import 'Widget Build Visualization/basic.dart';
 class Visualization extends StatefulWidget {
   const Visualization({Key? key}) : super(key: key);
 
@@ -88,72 +93,100 @@ class _VisualizationState extends State<Visualization> {
     );}),
 
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
+            InkWell(onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PlatformSpecific()),
+              );
+            },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*.7,
+                    child: Row(
 
-                    children: [
-                      Icon(Icons.check_box_outline_blank,),
-                      Text("Platform specific widgets",style: TextStyle(fontSize: 18),),
-                    ],
+                      children: [
+                        Icon(Icons.check_box_outline_blank,),
+                        Text("Platform specific widgets",style: TextStyle(fontSize: 18),),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(Icons.arrow_forward_ios,)
-              ],
+                  Icon(Icons.arrow_forward_ios,)
+                ],
+              ),
             ),
             SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
+            InkWell(onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LayoutWidgets()),
+              );
+            },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*.7,
+                    child: Row(
 
-                    children: [
-                      Icon(Icons.check_box_outline_blank,),
-                      Text("Layout widgets",style: TextStyle(fontSize: 18),),
-                    ],
+                      children: [
+                        Icon(Icons.check_box_outline_blank,),
+                        Text("Layout widgets",style: TextStyle(fontSize: 18),),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(Icons.arrow_forward_ios,)
-              ],
+                  Icon(Icons.arrow_forward_ios,)
+                ],
+              ),
             ),
             SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*.7,
-                  child: Row(
+            InkWell(onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => StateMaintenance()),
+              );
+            },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*.7,
+                    child: Row(
 
-                    children: [
-                      Icon(Icons.check_box_outline_blank,),
-                      Text("State maintenance widgets",style: TextStyle(fontSize: 18),),
-                    ],
+                      children: [
+                        Icon(Icons.check_box_outline_blank,),
+                        Text("State maintenance widgets",style: TextStyle(fontSize: 18),),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(Icons.arrow_forward_ios,)
-              ],
+                  Icon(Icons.arrow_forward_ios,)
+                ],
+              ),
             ),
             SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
+            InkWell(onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Basic()),
+              );
+            },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
 
-                  child: Row(
+                    child: Row(
 
-                    children: [
-                      Icon(Icons.check_box_outline_blank,),
-                      Text("Platform independent / basic widgets",style: TextStyle(fontSize: 18),),
-                    ],
+                      children: [
+                        Icon(Icons.check_box_outline_blank,),
+                        Text("Platform independent / basic widgets",style: TextStyle(fontSize: 18),),
+                      ],
+                    ),
                   ),
-                ),
-                Icon(Icons.arrow_forward_ios,)
-              ],
+                  Icon(Icons.arrow_forward_ios,)
+                ],
+              ),
             ),
           ],
         ),

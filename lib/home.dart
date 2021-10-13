@@ -4,6 +4,8 @@ import 'package:flutter_learning/CONST/color.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
+import 'Rest_Api/apihome.dart';
+import 'WIDGET/widget_home.dart';
 import 'installation.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -126,25 +128,32 @@ class _HomeState extends State<Home> {
                         ],),
                     ) ,),
 
-                  Container(
-                    decoration: BoxDecoration(
+                  InkWell(onTap: (){
+                   Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>   WidgetHome()),
+                    );
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
 
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
 
 
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                        Container(width: 40,height: 40,child: Image.asset("assets/settings.png",color: MyColor.TheamColor,),),
-                          Text("WIDGET",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                          Container(width: 40,height: 40,child: Image.asset("assets/settings.png",color: MyColor.TheamColor,),),
+                            Text("WIDGET",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
 
-                      ],),
-                    ) ,),
+                        ],),
+                      ) ,),
+                  ),
                   Container(
                     decoration: BoxDecoration(
 
@@ -164,25 +173,32 @@ class _HomeState extends State<Home> {
 
                         ],),
                     ) ,),
-                  Container(
-                    decoration: BoxDecoration(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ApiHome()),
+                    );
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
 
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
 
 
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
     Container(width: 40,height: 40,child: Image.asset("assets/api.png",color: MyColor.TheamColor,),),
-                          Text("REST API ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
+                            Text("REST API ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
 
-                        ],),
-                    ) ,),
+                          ],),
+                      ) ,),
+                  ),
                   Container(
                     decoration: BoxDecoration(
 
