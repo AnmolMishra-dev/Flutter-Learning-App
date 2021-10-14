@@ -252,7 +252,7 @@ class _HomeState extends State<Home> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(width: 40,height: 40,child: Image.asset("assets/animation.png",color: MyColor.TheamColor,),),
-                          Text("ANIMAtION",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                          Text("ANIMATION",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
 
                         ],),
                     ) ,),
