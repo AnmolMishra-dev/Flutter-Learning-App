@@ -41,6 +41,12 @@ class _UrlLauncherState extends State<UrlLauncher> {
       "content": "In flutter project open pubspec.yaml file & under dependencies section add url launcher package.",
       "imageshow": true,
       "image": "https://drive.google.com/uc?export=view&id=1ikhKajA26e0fzDSInSyWcVfwISDMnNDn"
+    },
+    {
+      "heading": "Complete Code ",
+      "content": "",
+      "imageshow": true,
+      "image": "https://drive.google.com/uc?export=view&id=1d8bepk2Ecu5l891Bh9__VOufx0SroEnn"
     }
 
 

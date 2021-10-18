@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
 import 'package:flutter_learning/Package/sharedPre.dart';
+import 'package:flutter_learning/Package/urllauncher.dart';
 import 'package:shimmer/shimmer.dart';
+
+import 'image_picker.dart';
 class PackageHome extends StatefulWidget {
   const PackageHome({Key? key}) : super(key: key);
 
@@ -82,36 +85,52 @@ child: Center(child: Text("Shared_Preferences",style: TextStyle(fontSize: 20),))
               ),
             ),
             SizedBox(height: 10,),
-            Container(
-              height: 40,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                      colors: [
-                        MyColor.Package_home_gradiant_3box1,
-                        MyColor.Package_home_gradiant_3box2,
+            InkWell(
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>UrlLauncher()),
+                );
+              },
+              child: Container(
+                height: 40,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: LinearGradient(
+                        colors: [
+                          MyColor.Package_home_gradiant_3box1,
+                          MyColor.Package_home_gradiant_3box2,
 
-                      ]
-                  )
-              ),
+                        ]
+                    )
+                ),
 child: Center(child: Text("Url_Launcher",style: TextStyle(fontSize: 20),)),
+              ),
             ),
             SizedBox(height: 10,),
-            Container(
-              height: 40,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                      colors: [
-                        MyColor.Package_home_gradiant_4box1,
-                        MyColor.Package_home_gradiant_4box2,
+            InkWell(onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Imagepicker()),
+              );
 
-                      ]
-                  )
+            },
+              child: Container(
+                height: 40,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: LinearGradient(
+                        colors: [
+                          MyColor.Package_home_gradiant_4box1,
+                          MyColor.Package_home_gradiant_4box2,
+
+                        ]
+                    )
+                ),
+                child: Center(child: Text("Image picker" ,style: TextStyle(fontSize: 20),)),
               ),
-              child: Center(child: Text("Image picker" ,style: TextStyle(fontSize: 20),)),
             ),
             SizedBox(height: 10,),
             Container(
