@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const MysqlDatabse()
+      home: const Home()
     );
   }
 }

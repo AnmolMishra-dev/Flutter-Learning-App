@@ -292,6 +292,110 @@ class _HomeState extends State<Home> {
                     decoration: BoxDecoration(
                         border: Border.all(color:MyColor.TheamColor,width: 2.0)
                     ),
+                    width: MediaQuery.of(context).size.width*.4,
+                    height: 80,
+                    child:Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                          Text("Firebase",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                        ],),
+                    ) ,),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    ),
+                    width: MediaQuery.of(context).size.width*.4,
+                    height: 80,
+                    child:Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                          Text("GetX",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                        ],),
+                    ) ,),
+
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    ),
+                    width: MediaQuery.of(context).size.width*.4,
+                    height: 80,
+                    child:Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                          Text("ReduX",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                        ],),
+                    ) ,),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    ),
+                    width: MediaQuery.of(context).size.width*.4,
+                    height: 80,
+                    child:Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                          Text("Provider ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                        ],),
+                    ) ,),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    ),
+                    width: MediaQuery.of(context).size.width*.4,
+                    height: 80,
+                    child:Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                          Text("VelocityX ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                        ],),
+                    ) ,),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    ),
+                    width: MediaQuery.of(context).size.width*.4,
+                    height: 80,
+                    child:Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                          Text("bloc",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                        ],),
+                    ) ,),
+
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    ),
                     width: MediaQuery.of(context).size.width*.85,
                     height: 90,
                     child:Center(
