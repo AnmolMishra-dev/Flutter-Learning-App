@@ -255,21 +255,7 @@ child: Center(child: Text("Path Provider",style: TextStyle(fontSize: 20),)),
               ),
             ),
             SizedBox(height: 10,),
-            Container(
-              height: 40,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  gradient: LinearGradient(
-                      colors: [
-                        MyColor.Package_home_gradiant_1box1,
-                        MyColor.Package_home_gradiant_1box2,
 
-                      ]
-                  )
-              ),
-              child: Center(child: Text("Share",style: TextStyle(fontSize: 20),)),
-            ),
 
 
           ],
