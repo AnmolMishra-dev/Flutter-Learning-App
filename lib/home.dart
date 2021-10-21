@@ -4,6 +4,8 @@ import 'package:flutter_learning/CONST/color.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
+import 'Database/Databasehome.dart';
+import 'Package/pakage_home.dart';
 import 'Rest_Api/apihome.dart';
 import 'WIDGET/widget_home.dart';
 import 'installation.dart';
@@ -199,25 +201,34 @@ class _HomeState extends State<Home> {
                           ],),
                       ) ,),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
+                  InkWell(onTap: (){
 
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Database()),
+                    );
+
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
 
 
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/database.png",color: MyColor.TheamColor,),),
-                          Text("DATABASE",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/database.png",color: MyColor.TheamColor,),),
+                            Text("DATABASE",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
 
-                        ],),
-                    ) ,),
+                          ],),
+                      ) ,),
+                  ),
                   Container(
                     decoration: BoxDecoration(
 
@@ -256,22 +267,29 @@ class _HomeState extends State<Home> {
 
                         ],),
                     ) ,),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/boxes.png",color: MyColor.TheamColor,),),
-                          Text("PACKAGE",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PackageHome()),
+                    );
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/boxes.png",color: MyColor.TheamColor,),),
+                            Text("PACKAGE",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
 
-                        ],),
-                    ) ,),
+                          ],),
+                      ) ,),
+                  ),
                   Container(
                     decoration: BoxDecoration(
                         border: Border.all(color:MyColor.TheamColor,width: 2.0)

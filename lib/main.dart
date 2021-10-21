@@ -9,6 +9,7 @@ import 'Rest_Api/deleteapi.dart';
 import 'Rest_Api/getapi.dart';
 import 'Rest_Api/postapi.dart';
 import 'Rest_Api/updateapi.dart';
+import 'animated/animationhome.dart';
 import 'home.dart';
 
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const PackageHome()
+      home: const AnimHome()
     );
   }
 }
