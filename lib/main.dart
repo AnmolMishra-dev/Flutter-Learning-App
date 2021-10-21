@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/velocity_x.dart';
 
 
 import 'Database/hive.dart';
@@ -9,7 +10,6 @@ import 'Rest_Api/deleteapi.dart';
 import 'Rest_Api/getapi.dart';
 import 'Rest_Api/postapi.dart';
 import 'Rest_Api/updateapi.dart';
-import 'animated/animationhome.dart';
 import 'home.dart';
 
 
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const AnimHome()
+      home: const Velocity_xHome()
     );
   }
 }

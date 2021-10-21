@@ -8,7 +8,9 @@ import 'Database/Databasehome.dart';
 import 'Package/pakage_home.dart';
 import 'Rest_Api/apihome.dart';
 import 'WIDGET/widget_home.dart';
+import 'animated/animationhome.dart';
 import 'installation.dart';
+import 'interview.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -248,25 +250,32 @@ class _HomeState extends State<Home> {
 
                         ],),
                     ) ,),
-                  Container(
-                    decoration: BoxDecoration(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AnimHome()),
+                    );
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
 
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
 
 
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/animation.png",color: MyColor.TheamColor,),),
-                          Text("ANIMATION",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/animation.png",color: MyColor.TheamColor,),),
+                            Text("ANIMATION",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
 
-                        ],),
-                    ) ,),
+                          ],),
+                      ) ,),
+                  ),
                   InkWell(onTap: (){
                     Navigator.push(
                       context,
@@ -410,22 +419,30 @@ class _HomeState extends State<Home> {
                         ],),
                     ) ,),
 
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
-                    ),
-                    width: MediaQuery.of(context).size.width*.85,
-                    height: 90,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/interview.png",color: MyColor.TheamColor,),),
-                          Text("INTERVIEW QUESTIONS",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Interview()),
+                    );
 
-                        ],),
-                    ) ,),
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                      ),
+                      width: MediaQuery.of(context).size.width*.85,
+                      height: 90,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/interview.png",color: MyColor.TheamColor,),),
+                            Text("INTERVIEW QUESTIONS",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                          ],),
+                      ) ,),
+                  ),
                 ],
               ),
 
