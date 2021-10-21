@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/velocity_x.dart';
 
 
-import 'Database/hive.dart';
-import 'Database/mysql.dart';
-import 'Database/objectbox.dart';
-import 'Package/pakage_home.dart';
-import 'Rest_Api/deleteapi.dart';
-import 'Rest_Api/getapi.dart';
-import 'Rest_Api/postapi.dart';
-import 'Rest_Api/updateapi.dart';
-import 'home.dart';
+
+import 'bloc.dart';
+
 
 
 
@@ -33,7 +26,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Velocity_xHome()
+      home: const BlocHome()
     );
   }
 }
