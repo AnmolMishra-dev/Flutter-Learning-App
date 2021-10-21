@@ -10,6 +10,7 @@ import 'Package/pakage_home.dart';
 import 'Rest_Api/apihome.dart';
 import 'WIDGET/widget_home.dart';
 import 'animated/animationhome.dart';
+import 'bloc.dart';
 import 'installation.dart';
 import 'interview.dart';
 class Home extends StatefulWidget {
@@ -410,23 +411,31 @@ class _HomeState extends State<Home> {
                           ],),
                       ) ,),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
-                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
-                          Text("bloc",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BlocHome()),
+                    );
 
-                        ],),
-                    ) ,),
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                            // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                            Text("bloc",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                          ],),
+                      ) ,),
+                  ),
 
                   InkWell(onTap: (){
                     Navigator.push(
