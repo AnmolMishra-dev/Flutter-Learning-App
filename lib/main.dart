@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const FirbaseHome()
+      home: const Home()
     );
   }
 }
