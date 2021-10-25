@@ -10,6 +10,7 @@ import 'Rest_Api/getapi.dart';
 import 'Rest_Api/postapi.dart';
 import 'Rest_Api/updateapi.dart';
 
+import 'firbase/firbasehome.dart';
 import 'home.dart';
 
 
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Home()
+      home: const FirbaseHome()
     );
   }
 }
