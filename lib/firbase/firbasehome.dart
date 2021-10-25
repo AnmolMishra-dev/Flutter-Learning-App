@@ -56,9 +56,42 @@ class _FirbaseHomeState extends State<FirbaseHome> {
     {
       "heading": "",
       "content": "Because this method is asynchronous, you have to use FutureBuilder inside the build method:",
-      "imageshow": false,
+      "imageshow": true,
       "image": "https://drive.google.com/uc?export=view&id=1N3ZH7UVLS7pxiOzUgnv7MA03kxw93Nfu"
     },
+    {
+      "heading": "Register a new user",
+      "content": "When a new user arrives, before logging in, they have to register to the Firebase authentication.\n\nCreate a new dart file called fire_auth.dart and define a new method called registerUsingEmailPassword():Here we are registering a new user using the email and password provided and associating the name of the user with this profile.\n\nThere can be various FirebaseAuthException errors, which we have handled in the above code snippet.",
+      "imageshow": true,
+      "image": "https://drive.google.com/uc?export=view&id=1p1e8bJX3guaVRoCyhn39MthJvmzvDpM_"
+    },
+    {
+      "heading": "User sign-in and sign-out",
+      "content": "The email and password are used to generate the User object provided by Firebase. The User can be used later to retrieve any additional data (e.g., user name, profile picture, etc.) stored in that account.\n\nYou can use the signOut() method to log a user out. There is no need to create a separate method for signing out because it’s just a single line of code:The email and password are used to generate the User object provided by Firebase. The User can be used later to retrieve any additional data (e.g., user name, profile picture, etc.) stored in that account.\n\nYou can use the signOut() method to log a user out. There is no need to create a separate method for signing out because it’s just a single line of code:",
+      "imageshow": true,
+      "image": "https://drive.google.com/uc?export=view&id=11e2azloL1UFr-xfGvAxRMlu6Cyb6bWyf"
+    },
+
+    {
+      "heading": "",
+      "content": "",
+      "imageshow": true,
+      "image": "https://drive.google.com/uc?export=view&id=1S7YuK0CpchOc2rrmIdKFsAxOshnuUXM2"
+    },
+    {
+      "heading": "Send email verification",
+      "content": "Let’s say you want to verify whether a user has entered the correct email address before proceeding. To send an email verification, you can use the sendEmailVerification() method on the User object:",
+      "imageshow": true,
+      "image": "https://drive.google.com/uc?export=view&id=1bhcUohwIvx16dPWsBSNruIpPIRO7UGJH"
+    },
+    {
+      "heading": "Refresh user",
+      "content": "We’ll define one more method inside the FireAuth class for refreshing the User:",
+      "imageshow": true,
+      "image": "https://drive.google.com/uc?export=view&id=1H7h8-VZe5LhiQ0EalZekeJSQn0E2krit"
+    },
+
+
 
   ];
   @override
