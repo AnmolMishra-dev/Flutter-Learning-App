@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 
+import 'AUTHENTICATION/authhome.dart';
 import 'Database/hive.dart';
 import 'Database/mysql.dart';
 import 'Database/objectbox.dart';
@@ -25,6 +28,7 @@ class MyApp extends StatelessWidget {
 
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,8 +40,38 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Home()
+      home: const Auth()
     );
   }
 }
+class Splash extends StatefulWidget {
+  const Splash({Key? key}) : super(key: key);
+
+  @override
+  _SplashState createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+
+    super.initState();
+    Timer(Duration(seconds: 3),
+    ()=>Navigator.pushReplacement(context,
+        MaterialPageRoute(builder:
+            (context) =>
+            Home()
+        )
+    ));
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Center(child: FlutterLogo(size: MediaQuery.of(context).size.width*.5,),),
+
+
+    );
+  }
+}
+
 
