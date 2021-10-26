@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/CONST/color.dart';
 import 'package:flutter_learning/provider.dart';
+import 'package:flutter_learning/redx.dart';
 import 'package:flutter_learning/velocity_x.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 import 'package:shimmer/shimmer.dart';
@@ -371,23 +372,31 @@ class _HomeState extends State<Home> {
                       ) ,),
                   ),
 
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
-                          // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
-                          Text("ReduX",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RedxHome()),
+                    );
 
-                        ],),
-                    ) ,),
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Icon(Icons.flutter_dash,color: MyColor.TheamColor,size: 40,),
+                            // Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                            Text("ReduX",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                          ],),
+                      ) ,),
+                  ),
                   InkWell(onTap: (){
                     Navigator.push(
                       context,
