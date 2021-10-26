@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 
-import 'AUTHENTICATION/authhome.dart';
 import 'Database/hive.dart';
 import 'Database/mysql.dart';
 import 'Database/objectbox.dart';
@@ -40,7 +39,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Auth()
+      home: const Splash()
     );
   }
 }

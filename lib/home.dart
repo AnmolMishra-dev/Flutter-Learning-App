@@ -7,6 +7,7 @@ import 'package:flutter_learning/velocity_x.dart';
 import 'package:flutter_learning/what_is_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
+import 'AUTHENTICATION/authhome.dart';
 import 'Database/Databasehome.dart';
 import 'Package/pakage_home.dart';
 import 'Rest_Api/apihome.dart';
@@ -16,6 +17,7 @@ import 'bloc.dart';
 import 'firbase/firbasehome.dart';
 import 'getx.dart';
 import 'installation.dart';
+import 'package:share_plus/share_plus.dart';
 import 'interview.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -47,7 +49,14 @@ class _HomeState extends State<Home> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.share,color: MyColor.TheamColor,),
+            child: InkWell(
+            onTap: (){
+              Share.share('http://192.168.1.73:6768/anmol/flutter-learning-demo.git',subject: "Flutter Learning App");
+
+
+            }
+
+            ,child: Icon(Icons.share,color: MyColor.TheamColor,)),
           )
         ],
 
@@ -164,25 +173,33 @@ class _HomeState extends State<Home> {
                         ],),
                       ) ,),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Auth()),
+                    );
 
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
 
 
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/authentication.png",color: MyColor.TheamColor,),),
-                          Text("AUTHENTICATION ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/authentication.png",color: MyColor.TheamColor,),),
+                            Text("AUTHENTICATION ",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold),)
 
-                        ],),
-                    ) ,),
+                          ],),
+                      ) ,),
+                  ),
                   InkWell(onTap: (){
                     Navigator.push(
                       context,
