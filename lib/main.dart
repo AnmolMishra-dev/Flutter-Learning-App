@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/redx.dart';
 
 
 import 'Database/hive.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
 
 
       ),
-      home: const Home()
+      home: const RedxHome()
     );
   }
 }
