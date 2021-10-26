@@ -106,7 +106,7 @@ class _RedxHomeState extends State<RedxHome> {
       "heading": "",
       "content": "fetchTime is an asynchronous function that receives the store as its only argument. In this function, we make an asynchronous request to the API to fetch the list of locations available.\n\nThen we used the Dart Random() function to select a random location in the list and make another asynchronous request to fetch the time for the selected location. We also formatted the date and location values received from the API to suit our application.\n\nFinally, we dispatched a FetchTimeAction to the store so we could update the new state.\n\nNow, let’s build the rest of our app:",
       "imageshow": true,
-      "image": "https://drive.google.com/file/d/1CoAeCdu4EiZ_IzenWHsXDKqJHOB0ZmaR/view?usp=sharing"
+      "image": "https://drive.google.com/uc?export=view&id=1CoAeCdu4EiZ_IzenWHsXDKqJHOB0ZmaR"
     }, {
       "heading": "",
       "content": "We begin by assigning an instance of the Store<AppState>. Then, we wrap the MaterialApp in StoreProvider<AppState>. This is because it is a base widget that will pass the given Redux store to all descendants that request it.\n\nThe Text widget that renders the location and time is one of the descendent widgets that depends on the store, so we wrap it in a StoreConnector to enable communication between the store and this widget.\n\nThe RaisedButton widget is the second widget that depends on the store. We also wrap it in the StoreConnector. Every click triggers the middleware to run its function and thereby update the state of the application.",
@@ -136,7 +136,7 @@ class _RedxHomeState extends State<RedxHome> {
           baseColor:MyColor.TheamColor,
           highlightColor: Color(0XFF91a0b8),
           child: Text(
-            'RedUX',
+            'ReduX',
             textAlign: TextAlign.center,
             style: TextStyle(fontSize: 30),
 
