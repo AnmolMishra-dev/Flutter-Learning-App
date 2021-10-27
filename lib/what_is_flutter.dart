@@ -5,7 +5,7 @@ import 'package:flutter_learning/CONST/color.dart';
 import 'package:shimmer/shimmer.dart';
 
 import 'installation.dart';
-
+import 'package:readmore/readmore.dart';
 class Flutter extends StatefulWidget {
   const Flutter({Key? key}) : super(key: key);
 
@@ -165,25 +165,36 @@ class _FlutterState extends State<Flutter> {
                           ]
                       ),
                     ),
+                    ReadMoreText(
 
-
-                    RichText(
-                      text: TextSpan(
-                          text: flutter[index]["sho"]==false?'Ans: ':"",
-                          style: TextStyle(
-                              color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
-                          children: <TextSpan>[
-                            TextSpan(text: flutter[index]["answer"],
-                                style: TextStyle(fontWeight: FontWeight.normal,
-                                     fontSize: 18),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    // navigate to desired screen
-                                  }
-                            )
-                          ]
-                      ),
+                        flutter[index]["answer"], trimLines: 1,
+                      colorClickableText: Colors.pink,
+                      trimMode: TrimMode.Length,
+                      trimCollapsedText: 'read more',
+                      trimExpandedText: 'Show less',
+                      moreStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold,color: Colors.black),
+                      lessStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold,color: Colors.black),
+                      style: TextStyle(fontWeight: FontWeight.normal,
+                                        fontSize: 18,color: Colors.black),
                     ),
+
+                    // RichText(
+                    //   text: TextSpan(
+                    //       text: flutter[index]["sho"]==false?'Ans: ':"",
+                    //       style: TextStyle(
+                    //           color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
+                    //       children: <TextSpan>[
+                    //         TextSpan(text: flutter[index]["answer"],
+                    //             style: TextStyle(fontWeight: FontWeight.normal,
+                    //                  fontSize: 18),
+                    //             recognizer: TapGestureRecognizer()
+                    //               ..onTap = () {
+                    //                 // navigate to desired screen
+                    //               }
+                    //         )
+                    //       ]
+                    //   ),
+                    // ),
                     SizedBox(height: 10,),
                     flutter[index]["imagebool"]==true?
                     InteractiveViewer(
@@ -191,23 +202,35 @@ class _FlutterState extends State<Flutter> {
                       minScale: .5,
                       child: Image.network(flutter[index]["image"]),
                     ):Container(),
-                    RichText(
-                      text: TextSpan(
-                          text:"",
-                          style: TextStyle(
-                              color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
-                          children: <TextSpan>[
-                            TextSpan(text: flutter[index]["answer1"],
-                                style: TextStyle(fontWeight: FontWeight.normal,
-                                    fontSize: 18),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    // navigate to desired screen
-                                  }
-                            )
-                          ]
-                      ),
+                    ReadMoreText(
+
+                      flutter[index]["answer1"], trimLines: 1,
+                      colorClickableText: Colors.pink,
+                      trimMode: TrimMode.Length,
+                      trimCollapsedText: 'read more',
+                      trimExpandedText: 'Show less',
+                      moreStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold,color: Colors.black),
+                      lessStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.bold,color: Colors.black),
+                      style: TextStyle(fontWeight: FontWeight.normal,
+                          fontSize: 18,color: Colors.black),
                     ),
+                    // RichText(
+                    //   text: TextSpan(
+                    //       text:"",
+                    //       style: TextStyle(
+                    //           color: Colors.black, fontSize: 20,fontWeight: FontWeight.bold),
+                    //       children: <TextSpan>[
+                    //         TextSpan(text: flutter[index]["answer1"],
+                    //             style: TextStyle(fontWeight: FontWeight.normal,
+                    //                 fontSize: 18),
+                    //             recognizer: TapGestureRecognizer()
+                    //               ..onTap = () {
+                    //                 // navigate to desired screen
+                    //               }
+                    //         )
+                    //       ]
+                    //   ),
+                    // ),
 
                   ],
 
