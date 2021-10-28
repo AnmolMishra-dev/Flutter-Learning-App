@@ -19,6 +19,7 @@ import 'getx.dart';
 import 'installation.dart';
 import 'package:share_plus/share_plus.dart';
 import 'interview.dart';
+import 'overall.dart';
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -322,22 +323,30 @@ class _HomeState extends State<Home> {
                           ],),
                       ) ,),
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                        border: Border.all(color:MyColor.TheamColor,width: 2.0)
-                    ),
-                    width: MediaQuery.of(context).size.width*.4,
-                    height: 80,
-                    child:Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
-                          Text("OVERALL",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+                  InkWell(onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Overall()),
+                    );
 
-                        ],),
-                    ) ,),
+                  },
+                    child: Container(
+                      decoration: BoxDecoration(
+                          border: Border.all(color:MyColor.TheamColor,width: 2.0)
+                      ),
+                      width: MediaQuery.of(context).size.width*.4,
+                      height: 80,
+                      child:Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(width: 40,height: 40,child: Image.asset("assets/business.png",color: MyColor.TheamColor,),),
+                            Text("OVERALL",style: TextStyle(color: MyColor.TheamColor,fontWeight: FontWeight.bold)),
+
+                          ],),
+                      ) ,),
+                  ),
                   InkWell(onTap: (){
                     Navigator.push(
                       context,
